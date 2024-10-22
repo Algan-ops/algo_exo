@@ -9,7 +9,7 @@ POUR x ALLANT_DE 0 A 25
 	AFFICHER* x
 	FIN_POUR  
 FIN_ALGORITHME
-<!---------------5 bis---------------!>
+<!---------------2 ---------------!>
 2. FONCTIONS_UTILISEES
 VARIABLES
 x EST_DU_TYPE NOMBRE
@@ -21,7 +21,7 @@ TANT_QUE (x<25) FAIRE
 		FIN_TANT_QUE
 FIN_ALGORITHME
 
-<!---------------5 bis---------------!> 
+<!---------------3---------------!> 
 
 3. FONCTIONS_UTILISEES
 VARIABLES
@@ -37,7 +37,7 @@ y PREND_LA_VALEUR w
 AFFICHER* x
 AFFICHER y
 FIN_ALGORITHME
-<!---------------5 bis---------------!>
+<!---------------4---------------!>
 4. FONCTIONS_UTILISEES
 VARIABLES
   x EST_DU_TYPE NOMBRE
@@ -106,4 +106,161 @@ SI (n%==0) ALORS
 		DEBUT_SINON
 		AFFICHER "Le nombre n que vous avez choisi est impair"
 		FIN_SINON
+FIN_ALGORITHME
+
+<!---------------7---------------!>
+7. FONCTIONS_UTILISEES
+VARIABLES
+n EST_DU_TYPE NOMBRE
+DEBUT_ALGORITHME
+POUR n ALLANT_DE 1 A 20
+	DEBUT_POUR
+	n PREND_LA_VALEUR n+1
+		AFFICHER n
+		AFFICHER " " 
+	FIN_POUR
+FIN_ALGORITHME
+
+<!---------------bonus---------------!>
+
+bonus . FONCTIONS_UTILISEES
+VARIABLES
+n EST_DU_TYPE NOMBRE
+i EST_DU_TYPE NOMBRE
+j EST_DU_TYPE NOMBRE
+DEBUT_ALGORITHME
+LIRE n
+AFFICHER "la table de multiplication de : "
+AFFICHER n
+AFFICHER " "
+AFFICHER* "est"
+POUR i ALLANT_DE 1 A 10  
+	DEBUT_POUR
+	j PREND_LA_VALEUR n*i
+	AFFICHER n
+	AFFICHER "x"
+	AFFICHER i
+	AFFICHER "="
+	AFFICHER* j
+	FIN_POUR
+
+FIN_ALGORITHME
+
+<!---------------7---------------!>
+
+
+<!---------------8---------------!>
+
+FONCTIONS_UTILISEES
+VARIABLES
+n EST_DU_TYPE NOMBRE
+i EST_DU_TYPE NOMBRE
+j EST_DU_TYPE NOMBRE
+DEBUT_ALGORITHME
+
+lire i
+lire j
+
+n PREND_LA_VALEUR i*i+j*j
+n PREND_LA_VALEUR sqrt(n)
+
+AFFICHER n
+
+FIN_ALGORITHME
+
+<!---------------9---------------!>
+
+FONCTIONS_UTILISEES
+VARIABLES
+n EST_DU_TYPE NOMBRE
+DEBUT_ALGORITHME
+
+AFFICHER* "il est quelle heure tete de mort ?"
+	
+LIRE n
+SI (n >= 6 ET x <= 11) ALORS
+DEBUT_SI
+AFFICHER* "C'est le matin. je croit"
+FIN_SI
+SINON
+DEBUT_SINON
+SI (n >= 12 ET x <= 18) ALORS
+DEBUT_SI
+AFFICHER* "C'est l'après-midi. surment"
+FIN_SI
+SINON
+DEBUT_SINON
+SI (n >= 19 ET x <= 23) ALORS
+DEBUT_SI
+AFFICHER* "C'est le soir. c'est sur"
+FIN_SI
+SINON
+DEBUT_SINON
+SI (n >= 0 ET x <= 5) ALORS
+DEBUT_SI
+AFFICHER* "C'est la nuit. dort "
+FIN_SI
+SINON
+DEBUT_SINON
+AFFICHER* "l'heure n'est pas valide"
+FIN_SINON
+FIN_SINON
+FIN_SINON
+FIN_SINON
+FIN_ALGORITHME
+
+<!---------------10---------------!>
+
+FONCTIONS_UTILISEES
+VARIABLES
+x EST_DU_TYPE NOMBRE
+
+DEBUT_ALGORITHME
+
+POUR x ALLANT_DE 1 A 100
+DEBUT_POUR
+	
+SI (x%5 == 0 ET x%3 == 0) ALORS
+DEBUT_SI
+AFFICHER* "footbar"
+FIN_SI
+SINON
+DEBUT_SINON
+SI (x%3 == 0) ALORS
+DEBUT_SI
+AFFICHER* "foot"
+FIN_SI
+					
+SI (x%5 == 0) ALORS
+DEBUT_SI
+AFFICHER* "bar"
+FIN_SI
+				
+SI (x%5 != 0 ET x%3 != 0) ALORS
+DEBUT_SI
+AFFICHER* x
+FIN_SI							
+FIN_SINON					
+FIN_POUR
+
+FIN_ALGORITHME
+
+<!---------------11---------------!>
+
+11 . FONCTIONS_UTILISEES
+VARIABLES
+  n EST_DU_TYPE NOMBRE
+	i EST_DU_TYPE NOMBRE
+	j EST_DU_TYPE NOMBRE
+DEBUT_ALGORITHME
+POUR i ALLANT_DE 0 A 9
+	DEBUT_POUR
+	POUR n ALLANT_DE 0 A 9
+		DEBUT_POUR
+ 	 	j PREND_LA_VALEUR n*i
+ 	 		 AFFICHER j
+ 	 	AFFICHER " " 
+		FIN_POUR
+		AFFICHER* " "	
+	FIN_POUR	   	  
 FIN_ALGORITHME
